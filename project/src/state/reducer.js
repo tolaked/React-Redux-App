@@ -6,7 +6,7 @@ const initialState = {
 export function reducer(state = initialState, action) {
   switch (action.type) {
     case types.LISTDATA:
-      return { ...state, allTodo: [action.payload] };
+      return { ...state, allTodo: [...action.payload] };
 
     default:
       return state;
